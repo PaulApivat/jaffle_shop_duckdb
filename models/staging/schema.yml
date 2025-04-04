@@ -29,3 +29,19 @@ models:
         tests:
           - accepted_values:
               values: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
+
+  - name: stg_dex
+    columns:
+      - name: blockchain
+        tests: 
+          - accepted_values:
+              values: ['bnb', 'fantom']
+      - name: project
+        tests:
+          - accepted_values:
+              values: ['ellipsis_finance', 'curve']
+      - name: token_type
+        tests:
+          - accepted_values:
+              values: ['underlying_token_bought', 'pool_token', 'underlying_token_sold']
+            
